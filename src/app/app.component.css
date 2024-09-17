@@ -1,7 +1,45 @@
-.header{
-    padding: 30px;
-    display: flex;
-    gap: 10px;
+header {
+    padding: 30px 40px 20px;
     background-color: #FDF3D8;
     border-bottom: solid 1px black;
+    grid-template-columns: auto;
+    width: 100%;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    width: 100vw;
+    padding: 30px 20px 0px 20px;
+    margin: auyo;
+}
+
+li {
+    list-style-type: none;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+li:hover {
+    background-color: var(--secondary-color);
+    color: #FDF3D8;
 }
