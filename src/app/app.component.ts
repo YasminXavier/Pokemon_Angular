@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Directive } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { PokemonCardComponent } from './pokemon-card/pokemon-card.component'
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule,],
+  host: {ngSkipHydration: 'true'},
+  imports: [RouterModule, PokemonCardComponent],
   template: `
-    <main>
+  <main>
+    <body>
       <header>
         <div class="search">
           <img class="logo" src="/assets/pokeshop.png"/>
@@ -23,9 +27,10 @@ import { RouterModule } from '@angular/router';
         </div>
       </header>
       <section class="content">
+        <app-pokemon-card></app-pokemon-card>
       </section>
-    </main>
-  `,
+    </body>
+  </main>`,
   styleUrl: './app.component.css'
 })
 export class AppComponent {

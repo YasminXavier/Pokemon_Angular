@@ -1,10 +1,10 @@
 import {Routes} from '@angular/router';
-import {PokesComponent} from './pokes/pokes.component';
+import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 
 const routeConfig: Routes = [
     {
       path: '',
-      component: PokesComponent,
+      component: PokemonCardComponent,
       title: 'Home page',
     },
   ];

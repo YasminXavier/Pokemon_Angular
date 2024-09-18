@@ -1,7 +1,7 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   DOCUMENT
-} from "./chunk-GZVZLGCI.js";
+} from "./chunk-4HWACCY7.js";
 import {
   ANIMATION_MODULE_TYPE,
   Inject,
@@ -4439,4 +4439,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-B3UD35XJ.js.map
+//# sourceMappingURL=chunk-CWGFG5N5.js.map

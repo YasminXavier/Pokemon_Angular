@@ -7,7 +7,7 @@ import {
   EventManagerPlugin,
   HTTP_ROOT_INTERCEPTOR_FNS,
   HttpClientModule
-} from "./chunk-DJBXBDY5.js";
+} from "./chunk-CUTPVJPM.js";
 import {
   AnimationDriver,
   AnimationEngine,
@@ -16,7 +16,7 @@ import {
   NoopAnimationDriver,
   WebAnimationsDriver,
   WebAnimationsStyleNormalizer
-} from "./chunk-B3UD35XJ.js";
+} from "./chunk-CWGFG5N5.js";
 import {
   DOCUMENT,
   NullViewportScroller,
@@ -26,7 +26,7 @@ import {
   XhrFactory,
   getDOM,
   setRootDomAdapter
-} from "./chunk-GZVZLGCI.js";
+} from "./chunk-4HWACCY7.js";
 import {
   ALLOW_MULTIPLE_PLATFORMS,
   ANIMATION_MODULE_TYPE,
