@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import {PokemonComponent} from './pokemon-component/pokemon-component.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule, PokemonComponent],
+  imports: [RouterModule,],
   template: `
     <main>
       <header>
@@ -24,7 +23,6 @@ import {PokemonComponent} from './pokemon-component/pokemon-component.component'
         </div>
       </header>
       <section class="content">
-        <app-pokemon-component></app-pokemon-component>
       </section>
     </main>
   `,
