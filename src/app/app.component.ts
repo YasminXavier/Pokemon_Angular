@@ -1,13 +1,12 @@
 import { Component, Directive } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { PokemonCardComponent } from './pokemon-card/pokemon-card.component'
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
   host: {ngSkipHydration: 'true'},
-  imports: [RouterModule, PokemonCardComponent],
+  imports: [RouterModule],
   template: `
   <main>
     <body>
@@ -26,9 +25,6 @@ import { PokemonCardComponent } from './pokemon-card/pokemon-card.component'
           </ul>
         </div>
       </header>
-      <section class="content">
-        <app-pokemon-card></app-pokemon-card>
-      </section>
     </body>
   </main>`,
   styleUrl: './app.component.css'

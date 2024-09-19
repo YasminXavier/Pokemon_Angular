@@ -1,49 +1,40 @@
 {
-  "hash": "608951ea",
-  "configHash": "e37937da",
+  "hash": "4ee37d13",
+  "configHash": "edfcbaf8",
   "lockfileHash": "d38790fa",
-  "browserHash": "4e538a99",
+  "browserHash": "cf5c38cd",
   "optimized": {
-    "@angular/common": {
-      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
-      "file": "@angular_common.js",
-      "fileHash": "8824f5ac",
+    "@angular/common/http": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "af4a4d6b",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "f9063897",
+      "fileHash": "e1c0a13e",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "48db5715",
-      "needsInterop": false
-    },
-    "@angular/platform-browser/animations/async": {
-      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations/async.mjs",
-      "file": "@angular_platform-browser_animations_async.js",
-      "fileHash": "a545831c",
+      "fileHash": "0ec81cbe",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "989aeaa3",
+      "fileHash": "7f971f92",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-25YXU5OA": {
-      "file": "chunk-25YXU5OA.js"
+    "chunk-LUAWKPHN": {
+      "file": "chunk-LUAWKPHN.js"
     },
-    "browser-JHBSQLXB": {
-      "file": "browser-JHBSQLXB.js"
-    },
-    "chunk-76WCV54H": {
-      "file": "chunk-76WCV54H.js"
+    "chunk-OUTTBE4Q": {
+      "file": "chunk-OUTTBE4Q.js"
     },
     "chunk-7T3XUILT": {
       "file": "chunk-7T3XUILT.js"
