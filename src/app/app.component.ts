@@ -1,12 +1,13 @@
-import { Component, Directive } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
   host: {ngSkipHydration: 'true'},
-  imports: [RouterModule],
+  imports: [RouterModule, HomeComponent],
   template: `
   <main>
     <body>
@@ -25,6 +26,9 @@ import { RouterModule } from '@angular/router';
           </ul>
         </div>
       </header>
+      <section>
+        <app-home></app-home>
+      </section>
     </body>
   </main>`,
   styleUrl: './app.component.css'

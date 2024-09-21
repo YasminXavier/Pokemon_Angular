@@ -1,0 +1,15 @@
+body{
+    padding: 30px;
+}
+
+img{
+    width: fit-content;
+    height: auto;
+}
+
+.product{
+    width: 150px;
+    height: auto;
+    background-color: antiquewhite;
+    color: black;
+}
