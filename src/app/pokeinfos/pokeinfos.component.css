@@ -1,15 +1,41 @@
-body{
-    padding: 30px;
+
+.image{
+    width: auto;
+    height: 150px;
+    background-color: white;
+    object-fit: cover;
+    text-align: center;
+    border-radius: 15px;
 }
 
+
 img{
-    width: fit-content;
+    width: 150px;
     height: auto;
+}
+
+p{
+    font-size: large;
+}
+
+.price{
+    width: 70%;
 }
 
 .product{
-    width: 150px;
+    padding: 10px;
+    width: 250px;
     height: auto;
     background-color: antiquewhite;
     color: black;
+    border-radius: 15px;
+    display: block;
+}
+
+.infos{
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    align-items: baseline;
+    gap: 10px;
 }

@@ -12,22 +12,24 @@ import { HomeComponent } from './home/home.component';
   <main>
     <body>
       <header>
-        <div class="search">
+        <div class="head">
           <img class="logo" src="/assets/pokeshop.png"/>
-          <input type="text" placeholder="Search product"/>
-          <button class="primary" type="button"> Search</button>
+          <section class="search">
+            <input type="text" placeholder="Search product"/>
+            <button class="primary" type="button"> Search</button>
+          </section>
         </div>
         <div>
           <ul>
-            <li> Pokemons </li>
-            <li> Locations </li>
-            <li> Berries </li>
-            <li> Itens </li>
+            <li [routerLink]="['/']"><strong> Pokemons </strong></li>
+            <li><strong> Locations </strong></li>
+            <li><strong> Berries </strong></li>
+            <li><strong> Itens </strong></li>
           </ul>
         </div>
       </header>
       <section>
-        <app-home></app-home>
+        <router-outlet></router-outlet>
       </section>
     </body>
   </main>`,

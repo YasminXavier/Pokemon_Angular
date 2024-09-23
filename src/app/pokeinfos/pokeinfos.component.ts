@@ -1,16 +1,22 @@
 import { Component, Input } from '@angular/core';
 import { Pokeinfos } from '../pokeinfos';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-pokeinfos',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, RouterModule],
   template: `
-    <body>
+    <body class="body">
       <section class="product">
-        <img class="image" [src]="pokemonList.pic" alt="monstre"/>
-        <h3> {{pokemonList.name}} </h3>
-        <h4> $ {{pokemonList.price}}</h4>
+        <section class="image"><img  [src]="pokemonList.pic" alt="monstre"/></section>
+        <h4><strong> {{pokemonList.name}} </strong></h4>
+        <div class="infos">
+          <p class="price"> {{pokemonList.type}}</p>
+          <p> $ {{pokemonList.price}}</p>
+        </div>
+        <a [routerLink]="['/details', pokemonList.id]">Learn More</a>
       </section>
     </body>
   `,
