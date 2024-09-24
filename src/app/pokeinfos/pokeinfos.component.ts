@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
           <p class="price"> {{pokemonList.type}}</p>
           <p> $ {{pokemonList.price}}</p>
         </div>
-        <a [routerLink]="['/details', pokemonList.id]">Learn More</a>
+        <a [routerLink]="['/details', pokemonList.id]">Learn More > </a>
       </section>
     </body>
   `,

@@ -18,7 +18,7 @@ const routeConfig: Routes = [
       /* In this case, :id is dynamic and will change based on how
       the route is requested by the code. */,
       component: PokemonDetailsComponent,
-      title: ':name details',
+      title: '{nome do pokemon}',
     },
   ];
   export default routeConfig;

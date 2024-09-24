@@ -24,7 +24,10 @@ export class HomeComponent {
   pokemoninfos: Pokeinfos[] = [];
   pokemonService: PokemonListService = inject(PokemonListService);
   constructor() {
-    this.pokemoninfos = this.pokemonService.getAllPokemons();
+    this.pokemonService.getAllPokemons().then((pokemoninfos: Pokeinfos[]) => {
+      this.pokemoninfos = pokemoninfos;
+      /*this.filteredPokemonList = pokemoninfos;*/
+    });
   }
 
 }

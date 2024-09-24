@@ -1,0 +1,58 @@
+.part1 {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.catalog{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #FCBA04;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+thead {
+    background-color: #FDD76E;
+}
+
+th {
+    border: 1px solid #FCBA04;
+    padding: 5px 10px;
+    width: 70px;
+    font-size: 10pt;
+}
+
+
+
+.informations {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: flex-start;
+    height: fit-content;
+}
+
+
+img {
+    width: 400px;
+}
+
+.screem{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

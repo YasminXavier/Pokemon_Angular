@@ -42,7 +42,6 @@ ul {
 
 li {
     font-size: larger;
-    list-style-type: none;
     text-transform: uppercase;
     color: var(--secondary-color);
     font-weight: bold;
