@@ -5,7 +5,7 @@ export interface Pokeinfos {
     description: string;
     height: number;
     weight: number;
-    type: string;
+    type: any[];
     category: string;
     level: number;
     hp: number;

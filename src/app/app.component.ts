@@ -15,7 +15,7 @@ import { HomeComponent } from './home/home.component';
         <div class="head">
           <img class="logo" src="/assets/pokeshop.png"/>
           <section class="search">
-            <input type="text" placeholder="Search product"/>
+            <input type="text" placeholder="Search item"/>
             <button class="primary" type="button"> Search</button>
           </section>
         </div>

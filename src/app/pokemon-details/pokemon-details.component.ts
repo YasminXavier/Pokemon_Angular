@@ -1,13 +1,15 @@
 import { Component, inject } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { PokemonListService } from '../pokemon-list.service';
 import { Pokeinfos } from '../pokeinfos';
+import { Ability } from '../abilities';
 
 @Component({
   selector: 'app-pokemon-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   template: `
   <body class="screem">
     <div class="part1">
@@ -16,13 +18,14 @@ import { Pokeinfos } from '../pokeinfos';
     </section>
     <section class="informations">
       <section class="catalog">
-        <p style="color: #D19E04;"> Category: {{pokemonList?.category}} | </p>
-        <p style="color: #D19E04;"> Type : {{pokemonList?.type}}</p>
+        <p> Category: {{pokemonList?.category}} | </p>
+        <section class="type">
+          <p><strong> Type: </strong></p>
+          <p *ngFor="let ptype of pokemonList?.type"> {{ptype.name}}</p>
+        </section>
       </section>
       <section class="title">
-        <h3> <strong>{{pokemonList?.name}} </strong></h3>
-        <h4 style="width: 100px;"> $ {{pokemonList?.price}}</h4>
-        <button> Add to bag </button>
+        <h3 > <strong>{{pokemonList?.name}} </strong></h3>
       </section>
         <p> {{pokemonList?.description}}</p>
         <section>
@@ -30,7 +33,7 @@ import { Pokeinfos } from '../pokeinfos';
         <li> <strong>Height:</strong> {{pokemonList?.height}} m</li>
         <li> <strong>Weight:</strong> {{pokemonList?.weight}} Kg</li>
         <li> <strong>Evolution:</strong> level {{pokemonList?.level}} </li>
-        <li> <strong>Ability:</strong> {{pokemonList?.abilities}} - {{pokemonList?.descabil}} </li>
+        <li> <strong>Ability:</strong> {{abilList?.name}}:  {{abilList?.descriprion}} </li>
         <li> <strong>Weakness:</strong> {{pokemonList?.weaknesses}} </li>
       </ul>
     </section>
@@ -57,7 +60,7 @@ import { Pokeinfos } from '../pokeinfos';
         </tr>
         </tbody>
       </table>
-      <a style="color: #D19E04; border: 0.5px solid #D19E04; padding: 5px 10px; border-radius: 5px"> see next product > </a>
+      <a> see next item > </a>
     </section>
       </section>
     </div>
@@ -67,13 +70,24 @@ import { Pokeinfos } from '../pokeinfos';
 })
 export class PokemonDetailsComponent {
 
+
+  pokemonService: PokemonListService = inject(PokemonListService);
+
   route: ActivatedRoute = inject(ActivatedRoute);
-  pokemonService = inject(PokemonListService);
   pokemonList: Pokeinfos | undefined;
+  abilList: Ability | undefined;
+
   constructor() {
     const pokemonId = parseInt(this.route.snapshot.params['id'], 10);
-    this.pokemonService.getPokemonById(pokemonId).then((pokemonList) => {
+    this.pokemonService.getPokemonById(pokemonId).then((pokemonList: any) => {
       this.pokemonList = pokemonList;
     });
+
+
+    const abilName = parseInt(this.route.snapshot.params['name'], 10);
+    this.pokemonService.getAbilitieById(abilName).then((abilList: any) => {
+      this.abilList = abilList;
+    });
   }
+
 }

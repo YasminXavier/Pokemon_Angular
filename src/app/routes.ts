@@ -11,14 +11,18 @@ const routeConfig: Routes = [
     {
       path: '',
       component: HomeComponent,
-      title: 'Home page',
+      title: 'Pokemons',
     },
     {
       path: 'details/:id'
       /* In this case, :id is dynamic and will change based on how
       the route is requested by the code. */,
       component: PokemonDetailsComponent,
-      title: '{nome do pokemon}',
+      title: ':name',
     },
+    {
+      path: 'detaisl/abilities/:id',
+      component: PokemonDetailsComponent
+    }
   ];
   export default routeConfig;

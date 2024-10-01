@@ -2,11 +2,14 @@
     {
         "id": 0,
         "name": "Bulbasaur",
-        "pic": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png",
+        "pic": "https://wiki.pokexgames.com/images/6/66/1_-_Bulbasaur.gif",
         "description": "For some time after its birth, it uses the nutrients that are packed into the seed on its back in order to grow.",
         "height": 0.7,
         "weight": 6.9,
-        "type": "Grass and Poison",
+        "type": [
+            {"name": "Grass"},
+            {"name": "Poison"}
+        ],
         "category": "Seed",
         "level": 1,
         "hp": 3,
@@ -15,8 +18,7 @@
         "sattack": 4,
         "sdefense": 4,
         "speed": 3,
-        "abilities": "Overgrow",
-        "descabil": "Powers up Grass-type moves when the Pokémon's HP is low.",
+        "abilities": "http://localhost:3000/abilities/0/",
         "weaknesses": "Fire, Ice, Flying and Psychcic",
         "price": 50
     },
@@ -797,7 +799,12 @@
         "weaknesses": "Grass and Eletric",
         "price":150
     }
+],
+"abilities":[
+    {
+        "id": 0,
+        "name": "Overgrow",
+        "description": "Powers up Grass-type moves when the Pokémon's HP is low."
+    }
 ]
-
 }
-

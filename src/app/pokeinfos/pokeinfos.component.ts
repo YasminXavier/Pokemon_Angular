@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Pokeinfos } from '../pokeinfos';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Ability } from '../abilities';
 
 @Component({
   selector: 'app-pokeinfos',
@@ -13,8 +14,7 @@ import { CommonModule } from '@angular/common';
         <section class="image"><img  [src]="pokemonList.pic" alt="monstre"/></section>
         <h4><strong> {{pokemonList.name}} </strong></h4>
         <div class="infos">
-          <p class="price"> {{pokemonList.type}}</p>
-          <p> $ {{pokemonList.price}}</p>
+          <p class="price"> {{pokemonList.category}}</p>
         </div>
         <a [routerLink]="['/details', pokemonList.id]">Learn More > </a>
       </section>
@@ -26,5 +26,7 @@ export class PokeinfosComponent {
 
   @Input()
   pokemonList!: Pokeinfos;
+
+  abilList!: Ability;
 
 }
