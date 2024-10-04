@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Pokeinfos } from './pokeinfos';
 import { Ability } from './abilities';
+import { Berries } from './berries';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PokemonListService {
-
   urlpokemons= 'http://localhost:3000/pokemons';
 
  
@@ -31,6 +31,18 @@ export class PokemonListService {
     const data = await fetch(`${this.urlabil}/${id}`);
     return (await data.json()) ?? {};
   }
+
+  urlberries= 'http://localhost:3000/berries';
+
+  async getAllBerries(): Promise<Berries[]> {
+    const data = await fetch(this.urlberries);
+    return (await data.json()) ?? [];
+  }
+  async getBerryById(id: number): Promise<Berries | undefined> {
+    const data = await fetch(`${this.urlberries}/${id}`);
+    return (await data.json()) ?? {};
+  }
+
 
 
 }

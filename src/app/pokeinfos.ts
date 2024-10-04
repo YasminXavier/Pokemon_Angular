@@ -14,8 +14,8 @@ export interface Pokeinfos {
     sattack: number;
     sdefense: number;
     speed: number;
-    abilities: string;
-    descabil: string;
+    ability: string;
     weaknesses: string;
-    price: number
+    stone: string;
+    evolution: string;
 }

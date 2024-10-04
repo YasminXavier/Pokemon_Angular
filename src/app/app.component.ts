@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './pokemons/home/home.component';
 
 
 @Component({
@@ -23,7 +23,7 @@ import { HomeComponent } from './home/home.component';
           <ul>
             <li [routerLink]="['/']"><strong> Pokemons </strong></li>
             <li><strong> Locations </strong></li>
-            <li><strong> Berries </strong></li>
+            <li [routerLink]="['berries']"><strong> Berries </strong></li>
             <li><strong> Itens </strong></li>
           </ul>
         </div>

@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { Pokeinfos } from '../pokeinfos';
+import { Pokeinfos } from '../../pokeinfos';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Ability } from '../abilities';
+import { Ability } from '../../abilities';
 
 @Component({
   selector: 'app-pokeinfos',
@@ -11,13 +11,15 @@ import { Ability } from '../abilities';
   template: `
     <body class="body">
       <section class="product">
-        <section class="image"><img  [src]="pokemonList.pic" alt="monstre"/></section>
-        <h4><strong> {{pokemonList.name}} </strong></h4>
-        <div class="infos">
-          <p class="price"> {{pokemonList.category}}</p>
-        </div>
-        <a [routerLink]="['/details', pokemonList.id]">Learn More > </a>
-      </section>
+        <section class="image">
+          <img  [src]="pokemonList.pic" alt="monstre"/>
+        </section>
+          <h4><strong> {{pokemonList.name}} </strong></h4>
+          <div class="infos">
+            <p class="price"> {{pokemonList.category}}</p>
+          </div>
+          <a [routerLink]="['/details', pokemonList.id]">Learn More > </a>
+        </section>
     </body>
   `,
   styleUrl: './pokeinfos.component.css'

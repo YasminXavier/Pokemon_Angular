@@ -32,8 +32,8 @@ th {
 
 
 .informations {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1000px));
     gap: 15px;
 }
 

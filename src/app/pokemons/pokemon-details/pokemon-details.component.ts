@@ -1,15 +1,14 @@
 import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { PokemonListService } from '../pokemon-list.service';
-import { Pokeinfos } from '../pokeinfos';
-import { Ability } from '../abilities';
+import { PokemonListService } from '../../pokemon-list.service';
+import { Pokeinfos } from '../../pokeinfos';
+import { Ability } from '../../abilities';
 
 @Component({
   selector: 'app-pokemon-details',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule],
   template: `
   <body class="screem">
     <div class="part1">
@@ -32,8 +31,10 @@ import { Ability } from '../abilities';
       <ul>
         <li> <strong>Height:</strong> {{pokemonList?.height}} m</li>
         <li> <strong>Weight:</strong> {{pokemonList?.weight}} Kg</li>
-        <li> <strong>Evolution:</strong> level {{pokemonList?.level}} </li>
-        <li> <strong>Ability:</strong> {{abilList?.name}}:  {{abilList?.descriprion}} </li>
+        <li> <strong>Level:</strong> level {{pokemonList?.level}} </li>
+        <li> <strong>Evolution Stone:</strong> {{pokemonList?.stone}} </li>
+        <li> <strong>Evolution:</strong> {{pokemonList?.evolution}} </li>
+        <li> <strong>Ability:</strong> {{abilList?.name}}:  {{abilList?.description}} </li>
         <li> <strong>Weakness:</strong> {{pokemonList?.weaknesses}} </li>
       </ul>
     </section>
@@ -84,8 +85,8 @@ export class PokemonDetailsComponent {
     });
 
 
-    const abilName = parseInt(this.route.snapshot.params['name'], 10);
-    this.pokemonService.getAbilitieById(abilName).then((abilList: any) => {
+    const abId = parseInt(this.route.snapshot.params['id'], 10);
+    this.pokemonService.getAbilitieById(abId).then((abilList: any) => {
       this.abilList = abilList;
     });
   }
