@@ -1,0 +1,55 @@
+.part1 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.catalog, .type{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: #D19E04;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #FCBA04;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+thead {
+    background-color: #FDD76E;
+}
+
+th {
+    border: 1px solid #FCBA04;
+    padding: 5px 10px;
+    width: 70px;
+    font-size: 10pt;
+}
+
+
+
+.informations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1000px));
+    gap: 15px;
+}
+
+.title {
+    align-items: flex-start;
+    height: fit-content;
+}
+
+
+img {
+    width: 200px;
+}
+
+.screem{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

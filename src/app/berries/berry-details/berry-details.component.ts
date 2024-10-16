@@ -9,7 +9,33 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-  
+  <body class="screem">
+    <div class="part1">
+      <section>
+        <img  [src]="berriesList?.pic" alt="monstre"/>
+      </section>
+      <section class="informations">
+        <section class="catalog">
+          <p><strong> Giftype:</strong> {{berriesList?.giftype}}</p>
+          <p><strong> Tasty:</strong> {{berriesList?.tasty}}</p>
+          <p><strong> Rarity:</strong> {{berriesList?.rarity}}</p>
+        </section>
+      <section class="title">
+        <h3 > <strong>{{berriesList?.name}} </strong></h3>
+      </section>
+        <p> {{berriesList?.description}}</p>
+        <p><strong> Effect: </strong>{{berriesList?.effect}}</p>
+        <section>
+          <p> Planting information </p>
+      <ul>
+        <li> <strong>Duration:</strong> {{berriesList?.duration}} Hrs </li>
+        <li *ngFor="let berryPlanting of berriesList?.planting"> <strong>Maturation:</strong> {{berryPlanting?.maturation}} Hrs</li>
+        <li *ngFor="let berryPlanting of berriesList?.planting"> <strong>rot:</strong> {{berryPlanting?.rot}} Hrs</li>
+      </ul>
+    </section>
+      </section>
+    </div>
+</body>
   `,
   styleUrl: './berry-details.component.css'
 })
